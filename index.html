@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alessandra Mancini – Personal Trainer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      overflow-x: hidden; /* ✅ Evita lo scorrimento orizzontale */
+    }
+
+    .sottotitolo {
+      font-size: 15px !important;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('A.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .menu-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .slide-in-left.animate {
+      animation: slideInLeft 1s ease-out forwards;
+    }
+
+    .slide-in-right.animate {
+      animation: slideInRight 1s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="display-3">Alessandra Mancini</h1>
+    <p class="lead fs-5 sottotitolo"><small>Personal Trainer | Benessere | Forza | Motivazione</small></p>
+    <a href="#contatti" class="btn btn-dark btn-sm mt-3">Prenota una sessione</a>
+  </div>
+</section>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-patch-check-fill text-primary"></i> Alessandra Mancini PT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>  
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#chi-siamo">Chi Sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#attivita">Attività</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CHI SONO -->
+<section id="chi-siamo" class="py-5">
+  <div class="container">
+    <h2 class="text-start">Chi Sono</h2>
+    <p class="lead">
+      Mi chiamo <strong>Alessandra Mancini</strong><br>• Personal Trainer certificata con oltre 30 anni di esperienza nel mondo del fitness.<br>
+  • Raggiungi i tuoi obiettivi in modo sano e duraturo.
+    </p>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Servizi</h2>
+    <div class="row gy-4 justify-content-center text-center">
+      <div class="col-6 col-md-3">
+        <i class="bi bi-person-bounding-box fs-1 text-primary"></i>
+        <h5 class="mt-2">Allenamento Individuale</h5>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-people-fill fs-1 text-success"></i>
+        <h5 class="mt-2">Gruppi</h5>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+        <h5 class="mt-2">Benessere</h5>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-book fs-1 text-warning"></i>
+        <h5 class="mt-2">Consulenze</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTIVITÀ -->
+<section id="attivita" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Attività</h2>
+    <div class="row gy-4 justify-content-center text-center">
+      <div class="col-6 col-md-3">
+        <i class="bi bi-person-arms-up fs-1 text-primary"></i>
+        <h6 class="mt-2">Personal Trainer</h6>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-droplet-half fs-1 text-info"></i>
+        <h6 class="mt-2">Acqua-Gym</h6>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-bullseye fs-1 text-danger"></i>
+        <h6 class="mt-2">Strike Zone</h6>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-person-video fs-1 text-warning"></i>
+        <h6 class="mt-2">Lezioni Private</h6>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-circle-square fs-1 text-secondary"></i>
+        <h6 class="mt-2">Pilates</h6>
+      </div>
+      <div class="col-6 col-md-3">
+        <i class="bi bi-bicycle fs-1 text-success"></i>
+        <h6 class="mt-2">Spinning</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti" class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2>Contattami</h2>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <p><strong>Email:</strong><br>
+          <a href="mailto:info@alessandramancini.it" class="btn btn-sm btn-light">
+            <i class="bi bi-envelope"></i>Mail</a>
+        </p>
+        <p><strong>Telefono:</strong><br>
+          <a href="tel:+393398091302" class="btn btn-sm btn-light">
+            <i class="bi bi-phone"></i> Chiamami
+          </a>
+        </p>
+        <p><strong>Zona:</strong> Roma – Nord-Est</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center py-4">
+  <div class="mt-3 d-flex justify-content-center gap-4 fs-3">
+    <a href="https://m.facebook.com/alessandra.mancini.7777019/" class="text-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/alessandramancini.pt" class="text-danger" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+  </div>
+  <p class="mt-3 mb-0">© 2025 Alessandra Mancini. Tutti i diritti riservati.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.slide-in-left, .slide-in-right').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
